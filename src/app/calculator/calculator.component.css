@@ -1,0 +1,37 @@
+.container{
+  width: 75%;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.result {
+  text-align: center;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.5em;
+  border: .5px groove;
+  border-radius: 2em;
+  padding: .2em;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.input {
+  text-align: right;
+  font-family: 'Fredoka', sans-serif;
+  margin-right: 35%;
+  padding: .2em;
+}
+
+td {
+  padding: 1em;
+  border-spacing: 1em;
+  height: 2em;
+  border: .3px solid;
+  border-radius: .3em;
+  text-align: center;
+  font-family: 'Fredoka', sans-serif;
+}

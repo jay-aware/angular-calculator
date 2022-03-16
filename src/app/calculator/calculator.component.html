@@ -11,30 +11,30 @@
   <table align="center" >
     <tr>
       <td colspan="2" type="button" (click)="allClear()">Clear All</td>
-      <td><-</td>
+      <td type="button" (click)="clear()"><-</td>
       <td>/</td>
     </tr>
     <tr>
-      <td>7</td>
-      <td>8</td>
-      <td>9</td>
+      <td type="button" (click)="pressNum('7')">7</td>
+      <td type="button" (click)="pressNum('8')">8</td>
+      <td type="button" (click)="pressNum('9')">9</td>
       <td>x</td>
     </tr>
     <tr>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
+      <td type="button" (click)="pressNum('4')">4</td>
+      <td type="button" (click)="pressNum('5')">5</td>
+      <td type="button" (click)="pressNum('6')">6</td>
       <td>-</td>
     </tr>
     <tr>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
+      <td type="button" (click)="pressNum('1')">1</td>
+      <td type="button" (click)="pressNum('2')">2</td>
+      <td type="button" (click)="pressNum('3')">3</td>
       <td>+</td>
     </tr>
     <tr>
-      <td>00</td>
-      <td>0</td>
+      <td type="button" (click)="pressNum('00')">00</td>
+      <td type="button" (click)="pressNum('0')">0</td>
       <td colspan="2">=</td>
     </tr>
   </table>

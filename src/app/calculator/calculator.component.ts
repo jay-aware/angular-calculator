@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { last } from 'rxjs/operators';
 
 @Component({
   selector: 'calculator',
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculator.component.css'],
 })
 export class CalculatorComponent implements OnInit {
+
   input: string = '';
-  result: string = '566';
+  result: string = '';
 
   allClear() {
     this.input = '';
@@ -33,6 +35,37 @@ export class CalculatorComponent implements OnInit {
     }
 
     this.input = this.input + num;
+  }
+
+  pressOp(op: string) {
+    const lastKey = this.input[this.input.length -1];
+
+    if (lastKey === '/' || lastKey === '*' || lastKey === '-' || lastKey === '+') {
+      return;
+    }
+
+    this.input = this.input + op;
+    this.calcAns();
+  }
+
+  calcAns() {
+    let formula = this.input;
+    let lastKey = formula[formula.length-1];
+
+    if (lastKey === '/' || lastKey === '*' || lastKey === '-' || lastKey === '+') {
+      formula = formula.substr(0, formula.length-1);
+    }
+
+    this.result = eval(formula);
+    console.log(formula);
+    console.log(this.result);
+  }
+
+  getAns() {
+    this.calcAns();
+    this.input = this.result;
+    if (this.input == "0") this.input ='';
+    this.input = ""
   }
 
   constructor() {}

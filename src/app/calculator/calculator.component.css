@@ -37,21 +37,17 @@ td {
   text-align: center;
   font-family: 'Fredoka', sans-serif;
   background-color: #c0eded;
+
+
+  /* the code below makes the calculator button text unselectable*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 td:hover {
   background-color: turquoise;
-}
-
-*.unselectable {
-  -moz-user-select: -moz-none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-
-  /*
-    Introduced in IE 10.
-    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-  */
-  -ms-user-select: none;
-  user-select: none;
 }

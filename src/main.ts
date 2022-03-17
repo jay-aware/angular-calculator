@@ -11,6 +11,7 @@ platformBrowserDynamic().bootstrapModule(AppModule).then(ref => {
     window['ngRef'].destroy();
   }
   window['ngRef'] = ref;
+  enableProdMode();
 
   // Otherwise, log the boot error
 }).catch(err => console.error(err));
